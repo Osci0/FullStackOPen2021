@@ -1,0 +1,28 @@
+title New note creation
+
+Browser->Server: HTTP POST https://studies.cs.helsinki.fi/exampleapp/new_note
+
+Server->Browser: HTTP status code 302
+
+note right of Server: Server asks the browser to do a URL-redirect to the location /exampleapp/notes
+note right of Server: Code on the server pushes the new note onto the array called notes
+
+Browser->Server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/notes
+
+Server->Browser: Server provides HTML-code to the browser
+
+note right of Server: The reload of the /notes page cause the browser to also fetch the CSS page and the JS page
+
+Browser->Server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/main.css
+
+Server->Browser: Server provides CSS-code to the browser
+
+Browser->Server:HTTP GET https://studies.cs.helsinki.fi/exampleapp/main.js
+
+Server->Browser: Provide the Javascript (JS) code to the browser
+
+Browser->Server: HTTP GEThttps://studies.cs.helsinki.fi/exampleapp/data.json
+
+Server->Browser: Provides the server with the notes to display
+
+note right of Server: This includes the new note 
