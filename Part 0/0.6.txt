@@ -17,5 +17,5 @@ Server --> browser: Provides the notes on the page and the date when they were c
 
 Browser --> Server: HTTP POST https://studies.cs.helsinki.fi/exampleapp/new_note_spa
 
-Server --> Browser : Saves the new note on the server and gives back the response, {message: "note created"}
+Server --> Browser : Saves the new note on the server on data.json and gives back the response, {message: "note created"}
 message: "note created"
